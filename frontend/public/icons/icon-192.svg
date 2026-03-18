@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="32" fill="#0d4f8b"/>
+  <g transform="translate(96,88)" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0,-36 L-30,0 L-18,0 L-18,20 L18,20 L18,0 L30,0 Z" fill="#34d399" stroke="none" opacity="0.3"/>
+    <path d="M-36,8 C-36,-16 -20,-36 0,-36 C20,-36 36,-16 36,8"/>
+    <path d="M-24,8 C-24,-10 -14,-24 0,-24 C14,-24 24,-10 24,8"/>
+    <line x1="-20" y1="20" x2="20" y2="20"/>
+    <line x1="-14" y1="28" x2="14" y2="28"/>
+  </g>
+  <text x="96" y="150" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="20" font-weight="bold">智航云连</text>
+</svg>

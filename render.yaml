@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: zhihang-yunlian
+    runtime: node
+    buildCommand: cd frontend && npm install && npx vite build && cd ../backend && npm install
+    startCommand: cd backend && node src/seed.js && node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001

@@ -1,0 +1,22 @@
+{
+  "name": "智航云连",
+  "short_name": "智航云连",
+  "description": "港航集疏运数字服务平台 - 运力直连、港区动态、智能拼单",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d4f8b",
+  "theme_color": "#0d4f8b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
