@@ -42,7 +42,7 @@ export default function Settlements() {
             <span className="text-sm text-gray-500">{isDriver ? '总收入' : '总支出'}</span>
             <DollarSign className="w-5 h-5 text-green-500" />
           </div>
-          <p className="text-2xl font-bold text-gray-800">¥{(isDriver ? stats.total_driver_amount : stats.total_amount || 0).toLocaleString()}</p>
+          <p className="text-2xl font-bold text-gray-800">¥{(isDriver ? (stats.total_driver_amount || 0) : (stats.total_amount || 0)).toLocaleString()}</p>
         </div>
         {isDriver && (
           <div className="stat-card">
@@ -50,7 +50,7 @@ export default function Settlements() {
               <span className="text-sm text-gray-500">平台服务费</span>
               <ArrowUpRight className="w-5 h-5 text-amber-500" />
             </div>
-            <p className="text-2xl font-bold text-gray-800">¥{(stats.total_platform_fee || 0).toLocaleString()}</p>
+            <p className="text-2xl font-bold text-gray-800">¥{((stats.total_platform_fee) || 0).toLocaleString()}</p>
           </div>
         )}
         <div className="stat-card">
