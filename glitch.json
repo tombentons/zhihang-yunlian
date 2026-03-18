@@ -1,0 +1,9 @@
+{
+  "install": "cd backend && npm install --build-from-source && cd ../frontend && npm install && npx vite build",
+  "start": "cd backend && node src/seed.js; node src/index.js",
+  "watch": {
+    "restart": {
+      "include": ["backend/src/"]
+    }
+  }
+}
