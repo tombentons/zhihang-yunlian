@@ -6,10 +6,13 @@
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
     "build:frontend": "cd frontend && npx vite build",
     "seed": "cd backend && node src/seed.js",
-    "start": "cd backend && node src/index.js",
+    "start": "cd backend && node src/seed.js && node src/index.js",
     "dev:backend": "cd backend && node src/index.js",
     "dev:frontend": "cd frontend && npx vite --host",
     "build": "npm run build:frontend",
     "postinstall": "cd backend && npm install && cd ../frontend && npm install && npm run build:frontend"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
