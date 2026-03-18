@@ -20,7 +20,7 @@ const insertUser = db.prepare(`
 
 const users = [
   // 管理员
-  ['admin', hash('admin123'), 'admin', '系统管理员', '13800000000', 'admin@zhihang.com', '智航云连科技', null, null, null, null, null, 100, 0, 0, 31.2304, 121.4737],
+  ['admin', hash('123456'), 'admin', '系统管理员', '13800000000', 'admin@zhihang.com', '智航云连科技', null, null, null, null, null, 100, 0, 0, 31.2304, 121.4737],
   // 货主
   ['shipper1', hash('123456'), 'shipper', '张明华', '13811111111', 'zhang@trade.com', '上海明华进出口贸易有限公司', null, null, null, null, null, 95, 28, 25, 31.2304, 121.4737],
   ['shipper2', hash('123456'), 'shipper', '李雪梅', '13811112222', 'li@export.com', '浙江瑞丰工贸有限公司', null, null, null, null, null, 92, 15, 13, 30.2741, 120.1551],
@@ -259,7 +259,7 @@ console.log('✅ 结算数据创建完成');
 console.log('\n🎉 所有种子数据填充完成！');
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 console.log('📋 测试账号信息：');
-console.log('  管理员: admin / admin123');
+console.log('  管理员: admin / 123456');
 console.log('  货　主: shipper1 / 123456');
 console.log('  司　机: driver1 / 123456');
 console.log('  货　代: forwarder1 / 123456');

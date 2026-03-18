@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { adminAPI } from '../api';
-import { Users, Shield, CheckCircle, XCircle, Search, Filter } from 'lucide-react';
+import { Users, Shield, CheckCircle, XCircle, Search, Filter, Trash2, Edit } from 'lucide-react';
 
 const roleLabels = { shipper: '货主', driver: '司机', forwarder: '货代', admin: '管理员' };
 const roleBadgeColors = { shipper: 'badge-blue', driver: 'badge-green', forwarder: 'badge-purple', admin: 'badge-red' };
@@ -41,6 +41,15 @@ export default function AdminUsers() {
       await adminAPI.updateUserStatus(userId, { status: newStatus });
       loadUsers();
     } catch (err) { alert(err.response?.data?.error || '操作失败'); }
+  }
+
+  async function handleDelete(userId, name) {
+    if (!confirm(`确认删除用户「${name}」？此操作不可恢复！`)) return;
+    try {
+      await adminAPI.deleteUser(userId);
+      alert('用户已删除');
+      loadUsers();
+    } catch (err) { alert(err.response?.data?.error || '删除失败'); }
   }
 
   return (
@@ -121,6 +130,12 @@ export default function AdminUsers() {
                           <button onClick={() => handleToggleStatus(u.id, u.status)}
                             className={`px-2 py-1 rounded text-xs ${u.status === 'active' ? 'bg-red-50 text-red-600 hover:bg-red-100' : 'bg-green-50 text-green-600 hover:bg-green-100'}`}>
                             {u.status === 'active' ? '暂停' : '启用'}
+                          </button>
+                        )}
+                        {u.role !== 'admin' && (
+                          <button onClick={() => handleDelete(u.id, u.real_name || u.username)}
+                            className="p-1.5 rounded-lg bg-red-50 text-red-600 hover:bg-red-100" title="删除用户">
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         )}
                       </div>

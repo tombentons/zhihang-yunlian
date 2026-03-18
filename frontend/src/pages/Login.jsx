@@ -163,7 +163,7 @@ export default function Login() {
               <button onClick={() => quickLogin('forwarder1', '123456')} className="text-xs px-3 py-2 rounded-lg border border-purple-200 text-purple-600 hover:bg-purple-50 transition-colors">
                 货代端体验
               </button>
-              <button onClick={() => quickLogin('admin', 'admin123')} className="text-xs px-3 py-2 rounded-lg border border-red-200 text-red-600 hover:bg-red-50 transition-colors">
+              <button onClick={() => quickLogin('admin', '123456')} className="text-xs px-3 py-2 rounded-lg border border-red-200 text-red-600 hover:bg-red-50 transition-colors">
                 管理后台
               </button>
             </div>

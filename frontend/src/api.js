@@ -103,6 +103,15 @@ export const adminAPI = {
   getUsers: (params) => api.get('/admin/users', { params }),
   verifyUser: (id, data) => api.put(`/admin/users/${id}/verify`, data),
   updateUserStatus: (id, data) => api.put(`/admin/users/${id}/status`, data),
+  updateUser: (id, data) => api.put(`/admin/users/${id}`, data),
+  deleteUser: (id) => api.delete(`/admin/users/${id}`),
+  getOrders: (params) => api.get('/admin/orders', { params }),
+  updateOrder: (id, data) => api.put(`/admin/orders/${id}`, data),
+  deleteOrder: (id) => api.delete(`/admin/orders/${id}`),
+  createPortDynamic: (data) => api.post('/admin/port-dynamics', data),
+  deletePortDynamic: (id) => api.delete(`/admin/port-dynamics/${id}`),
+  createContainer: (data) => api.post('/admin/containers', data),
+  deleteContainer: (id) => api.delete(`/admin/containers/${id}`),
 };
 
 export default api;
